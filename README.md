@@ -88,19 +88,6 @@ minikube stop
 
 ---
 
-## Architecture Kubernetes
-
-```
-Node (Minikube)
-├── Pod MySQL (1 replica)
-│   └── mysql:8.0
-│       └── PersistentVolume (1Gi)
-│
-└── Pod Spring Boot (3 replicas)
-    └── springboot-app:1.0
-```
-
----
 
 ## Ce qui a été réalisé
 
@@ -112,20 +99,3 @@ Node (Minikube)
 
 ---
 
-## Structure du projet
-
-```
-├── src/
-│   ├── main/
-│   │   ├── java/          # Code Spring Boot
-│   │   ├── resources/     # application.properties + static React build
-│   │   └── webapp/reactjs # Sources React
-├── k8s/
-│   ├── db-deployment.yaml      # MySQL : PVC + Deployment + Service
-│   ├── app-deployment.yaml     # Spring Boot : Deployment + Service
-│   ├── mysql-configMap.yaml    # ConfigMap (host, dbName)
-│   └── mysql-secrets.yaml      # Secrets (username, password)
-├── Dockerfile                  # Multi-stage : Node + Gradle + JRE
-├── compose.yaml                # Docker Compose
-└── README.md
-```
