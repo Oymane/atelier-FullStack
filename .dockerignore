@@ -1,0 +1,11 @@
+src/main/webapp/reactjs/node_modules
+src/main/webapp/reactjs/build
+src/main/frontend
+build/classes
+build/generated
+build/reports
+build/tmp
+.gradle
+*.iml
+.idea
+node_modules
